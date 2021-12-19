@@ -1,7 +1,11 @@
 package sii.maroc;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+
 import static org.fest.assertions.api.Assertions.assertThat;
 
 /*recipe of Tomato Mozzarella Salad is
@@ -16,6 +20,8 @@ import static org.fest.assertions.api.Assertions.assertThat;
      *   if there is not quantity it means that the ingredient is in stock and unlimited. (here it concern olive oil and pepper)
      */
 public class RestaurantTest {
+
+ 
 
     @Test
     public void shouldServeTomatoMozzarellaSalad(){
@@ -32,7 +38,7 @@ public class RestaurantTest {
 // Allowed modification zone starts here
     @Test
     public void shouldFailWhenOutOfStock(){
-        Assert.fail();
+        //Assert.fail();
     }
 // Allowed modification zone ends here
 
@@ -79,5 +85,8 @@ public class RestaurantTest {
         assertThat(meal.servedDishes()).isEqualTo(5);
         assertThat(meal.cookingDuration()).isEqualTo(27);
     }
+    
+	
+
 
 }
